@@ -1,6 +1,6 @@
 {
   "name": "bsh-defer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Promise wrapper allowing APIs that are designed both for Angular and Node to use a common defer api.",
   "main": "defer/defer.js",
   "scripts": {
