@@ -1,11 +1,11 @@
 {
   "name": "bsh-defer",
-  "version": "v0.0.4",
+  "version": "v0.0.5",
   "homepage": "https://github.com/FranzZemen/bsh-defer",
   "authors": [
     "FranzZemen <franzzemen@gmail.com>"
   ],
-  "description": "Promise wrapper allowing APIs that are designed both for Angular and Node to use a common defer api.",
+  "description": "Promise wrapper allowing APIs on angular or Node.",
   "main": "defer/defer.js",
   "keywords": [
     "fullstack",
@@ -15,7 +15,6 @@
   ],
   "license": "MIT",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "client/bower_components",
