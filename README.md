@@ -9,7 +9,7 @@ Usage:
 
 Defining your common angular/node api:
 
-(function (exports) {
+ (function (exports) {
     'use strict';
 
     var browser = typeof angular === 'object';
@@ -31,23 +31,23 @@ Defining your common angular/node api:
 
     exports.someApi = someApi;
 
-})(typeof exports === 'undefined' ? (this.bsh ? this.bsh : this.bsh = {}) : exports);
+ })(typeof exports === 'undefined' ? (this.bsh ? this.bsh : this.bsh = {}) : exports);
 
 
 Usage somewhere else in angular or node:
 
-// Node:
-require('some api path').someApi().then (
+ // Node:
+ require('some api path').someApi().then (
     function success(val) {
     },
     function failure(err) {
     }
-);
+ );
 
-// Angular:
-window.bsh.someApi().then(
+ // Angular:
+ window.bsh.someApi().then(
     function success(val) {
     },
     function failure(err) {
     }
-);
+ );
