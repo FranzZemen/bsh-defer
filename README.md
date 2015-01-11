@@ -9,45 +9,44 @@ Usage:
 
 Defining your common angular/node api:
 
-   (function (exports) {
-         'use strict';
+    (function (exports) {
+        'use strict';
 
-    var browser = typeof angular === 'object';
-    var defer = browser ? window.bsh.defer : require ('bsh-defer').defer;
+        var browser = typeof angular === 'object';
+        var defer = browser ? window.bsh.defer : require ('bsh-defer').defer;
 
-    function someApi () {
-        var deferred = defer();
+        function someApi () {
+            var deferred = defer();
 
-        // ... code possibly asynchronous...success condition
-        if (success) {
-            deferred.resolve(someValue);
+            // ... code possibly asynchronous...success condition
+            if (success) {
+                deferred.resolve(someValue);
+            }
+            // ... code possibly asynchronous...error condition
+            if (err) {
+                deferred.reject(err);
+            }
+            return deferred;
         }
-        // ... code possibly asynchronous...error condition
-        if (err) {
-            deferred.reject(err);
-        }
-        return deferred;
-    }
 
-    exports.someApi = someApi;
-
- })(typeof exports === 'undefined' ? (this.bsh ? this.bsh : this.bsh = {}) : exports);
+        exports.someApi = someApi;
+    })(typeof exports === 'undefined' ? (this.bsh ? this.bsh : this.bsh = {}) : exports);
 
 
 Usage somewhere else in angular or node:
 
- // Node:
- require('some api path').someApi().then (
-    function success(val) {
-    },
-    function failure(err) {
-    }
- );
+    // Node:
+    require('some api path').someApi().then (
+        function success(val) {
+        },
+        function failure(err) {
+        }
+    );
 
- // Angular:
- window.bsh.someApi().then(
-    function success(val) {
-    },
-    function failure(err) {
-    }
- );
+    // Angular:
+    window.bsh.someApi().then(
+        function success(val) {
+        },
+        function failure(err) {
+        }
+    );
