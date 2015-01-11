@@ -1,3 +1,5 @@
+Installation (node):  npm install bsh-defer
+
 This module's purpose is to provide a promise usable either in angular or node.  It is
 a very trivial module, but helps simplify common apis a little.
 
