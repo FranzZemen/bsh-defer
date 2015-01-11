@@ -1,6 +1,6 @@
 {
   "name": "bsh-defer",
-  "version": "v0.0.5",
+  "version": "v0.0.6"
   "homepage": "https://github.com/FranzZemen/bsh-defer",
   "authors": [
     "FranzZemen <franzzemen@gmail.com>"
@@ -15,6 +15,7 @@
   ],
   "license": "MIT",
   "ignore": [
+    "package.json",
     "node_modules",
     "bower_components",
     "client/bower_components",
