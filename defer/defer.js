@@ -10,19 +10,19 @@
  */
 
 (function (exports) {
-  'use strict';
+    'use strict';
 
-  // Detect node or browser.  Since this is purposefully intended for angular, we look for the angular global.
-  var browser = typeof angular === 'object';
-  var defer;
-  if (browser) {
-    var $injector = angular.injector(['ng']);
-    var $q = $injector.get('$q', 'FullStackPromise');
-    defer = $q.defer;
-  } else {
-    defer = require('node-promise').defer;
-  }
-  exports.defer = defer;
+    // Detect node or browser.  Since this is purposefully intended for angular, we look for the angular global.
+    var browser = typeof angular === 'object';
+    var defer;
+    if (browser) {
+        var $injector = angular.injector(['ng']);
+        var $q = $injector.get('$q', 'FullStackPromise');
+        defer = $q.defer;
+    } else {
+        defer = require('node-promise').defer;
+    }
+    exports.defer = defer;
 
 })(typeof exports === 'undefined' ? (this.bsh ? this.bsh : this.bsh = {}) : exports); // i.e. in a browser it's implemented as window.bsh.FullStackPromise
 

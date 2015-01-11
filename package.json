@@ -1,0 +1,25 @@
+{
+  "name": "bsh-defer",
+  "version": "0.0.1",
+  "description": "Promise wrapper allowing APIs that are designed both for Angular and Node will function in both.",
+  "main": "defer/defer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FranzZemen/bsh-defer"
+  },
+  "keywords": [
+    "fullstack",
+    "angular",
+    "node",
+    "promise"
+  ],
+  "author": "Franz Zemen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FranzZemen/bsh-defer/issues"
+  },
+  "homepage": "https://github.com/FranzZemen/bsh-defer"
+}
