@@ -9,8 +9,8 @@ Usage:
 
 Defining your common angular/node api:
 
- (function (exports) {
-    'use strict';
+   (function (exports) {
+         'use strict';
 
     var browser = typeof angular === 'object';
     var defer = browser ? window.bsh.defer : require ('bsh-defer').defer;
