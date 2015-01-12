@@ -35,7 +35,7 @@ Defining your common angular/node api:
             if (err) {
                 deferred.reject(err);
             }
-            return deferred;
+            return deferred.promise;
         }
 
         exports.someApi = someApi;
