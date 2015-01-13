@@ -35,7 +35,7 @@ Defining your common angular/node api:
             if (err) {
                 deferred.reject(err);
             }
-            return deferred;
+            return deferred.promise;
         }
 
         exports.someApi = someApi;
@@ -52,7 +52,8 @@ Usage somewhere else in angular or node:
         }
     );
 
-    // Angular:
+    // Angular:  note that the first line could also read bsh.someAi().then{
+    // since the global window is implicity
     window.bsh.someApi().then(
         function success(val) {
         },

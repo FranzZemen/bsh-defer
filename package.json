@@ -1,6 +1,6 @@
 {
   "name": "bsh-defer",
-  "version": "v0.0.7",
+  "version": "v0.0.9",
   "description": "Node/Angular Promise wrapper",
   "main": "defer/defer.js",
   "scripts": {
