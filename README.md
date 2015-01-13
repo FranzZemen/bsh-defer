@@ -52,8 +52,8 @@ Usage somewhere else in angular or node:
         }
     );
 
-    // Angular:  note that the first line could also read bsh.someAi().then{
-    // since the global window is implicity
+    // Angular:  note that the first line could also read bsh.someApi().then{
+    // since the global window is implicit
     window.bsh.someApi().then(
         function success(val) {
         },
